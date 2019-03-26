@@ -6,14 +6,14 @@ import { AccountConsumer} from '../providers/AccountProvider'
 const Navbar = () => (
     <AccountConsumer>
         { value => (
-            <Menu>
+            <Menu inverted>
                 <NavLink to='/'>
-                    <Menu.Item>
+                    <Menu.Item color="pink">
                         Home
                     </Menu.Item>
                 </NavLink>
                 <NavLink to='/user/profile'>
-                    <Menu.Item>
+                    <Menu.Item position='right'>
                         { value.username}
                     {/* { this eventually will be an object so as to show the consumers user name} */}
                     </Menu.Item>

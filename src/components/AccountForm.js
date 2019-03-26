@@ -45,7 +45,7 @@ state = { username: '', email:'', firstName:'', lastName:'', }
                     value={email}
                     onChange={this.handleChange}
                     />
-                <Form.Button color='yellow'>Save</Form.Button>
+                <Form.Button color='instagram'>Save</Form.Button>
             </Form>
         )
     }
