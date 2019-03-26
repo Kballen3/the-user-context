@@ -18,6 +18,11 @@ const Navbar = () => (
                     {/* { this eventually will be an object so as to show the consumers user name} */}
                     </Menu.Item>
                 </NavLink>
+                <NavLink to='/favorite/things'>
+                    <Menu.Item color="pink">
+                        Favorite Things 
+                    </Menu.Item>
+                </NavLink>
             </Menu>
         )}
     </AccountConsumer>
