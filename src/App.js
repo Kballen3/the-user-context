@@ -10,7 +10,7 @@ const App = () => (
     <Container>
       <Switch>
         <Route exact path='/' render={ () => <div>Home</div>} />
-        <Route exact path='user/profile' render={ () => <UserProfile />} />
+        <Route exact path='/user/profile' render={ () => <UserProfile />} />
       </Switch>
     </Container>
   </Fragment>

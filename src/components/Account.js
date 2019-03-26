@@ -1,22 +1,26 @@
 import React from 'react'
 import {Card, } from 'semantic-ui-react'
+import { AccountConsumer, } from '../providers/AccountProvider'
 
 const Account = () => (
-    <Card>
-        <Card.Content>
-
-            <Card.Header>username</Card.Header>
-            <Card.Meta>
-                First Name: firstName
-            </Card.Meta>
-            <Card.Meta>
-                Last Name: lastName
-            </Card.Meta>
-        </Card.Content>
-        <Card.Content>
-            <p>Email: email</p>
-        </Card.Content>
-    </Card>
+    <AccountConsumer>
+        { value => (
+            <Card>
+                <Card.Content>
+                    <Card.Header>{value.username}</Card.Header>
+                    <Card.Meta>
+                        First Name: {value.firstName}
+                    </Card.Meta>
+                    <Card.Meta>
+                        Last Name: {value.lastName}
+                    </Card.Meta>
+                </Card.Content>
+                <Card.Content>
+                    <p>Email: {value.email}</p>
+                </Card.Content>
+            </Card>
+        )}
+    </AccountConsumer>
 )
 
 export default Account
